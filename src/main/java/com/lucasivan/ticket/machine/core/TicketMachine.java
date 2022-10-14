@@ -2,6 +2,7 @@ package com.lucasivan.ticket.machine.core;
 
 import com.lucasivan.ticket.machine.exception.PapelMoedaInvalidaException;
 import com.lucasivan.ticket.machine.exception.SaldoInsuficienteException;
+
 import java.util.Iterator;
 
 /**
@@ -30,14 +31,6 @@ public class TicketMachine {
             throw new PapelMoedaInvalidaException();
         }
         this.saldo += quantia;
-    }
-
-    public int getSaldo() {
-        return saldo;
-    }
-
-    public Iterator<Integer> getTroco() {
-        return null;
     }
 
     public String imprimir() throws SaldoInsuficienteException {
